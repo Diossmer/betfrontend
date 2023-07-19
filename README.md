@@ -1,3 +1,3 @@
 # Ecosistema
 
-![Ecosistema](https://i.imgur.com/KL8osSY.png)
+![Ecosistema](https://i.imgur.com/CCQFoMT.png)
