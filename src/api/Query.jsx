@@ -3,7 +3,7 @@ export const get = async (url) => {
 };
 
 export const post = async (url, params) => {
-  //console.log("Saved", url, params);
+  console.log("Saved", url, params);
   /*return await fetch(`${url}`, {
     method: "POST",
     headers: {
