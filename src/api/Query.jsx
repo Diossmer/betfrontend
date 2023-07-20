@@ -4,13 +4,13 @@ export const get = async (url) => {
 
 export const post = async (url, params) => {
   console.log("Saved", url, params);
-  /* return fetch(`${url}`, {
+  /*return await fetch(`${url}`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(params),
-  }); */
+  });*/
   return await {
     ok: 200,
     data: params,

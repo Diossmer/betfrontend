@@ -6,7 +6,7 @@ import Footers from "../templates/footers/Home";
 //components
 import Cards from "../components/card";
 //hook
-import { useState, useCallback, useMemo } from "react";
+import { useState } from "react";
 //import { UseHook } from "../hook/UseHook";
 //API
 import { post } from "../api/Query";
@@ -20,26 +20,18 @@ const param = {
 export default function Home() {
   const [dataValue, setDataValue] = useState([]);
 
-  /*function Sport({ param }) {
-    const mensaje = useMemo(() => {
-      return postSport();
-    }, [param])};*/
-  //deporte
-  function postSport() {
-    let response = post(URL.crear.sport, param);
-    response.then(function (valor) {
-      if (
-        !dataValue.some((item, index) => index !== valor.data[0] || !dataValue.includes(valor.data)) ||
-        !dataValue.filter((item, index) => {
-          dataValue.indexOf(item) === index;
-        })
-      ) {
-        setDataValue((prevData) => [...prevData, valor.data]);
-      }
-    });
-    return dataValue;
-  }
-
+  let response = post(URL.crear.sport, param);
+  response.then(function (valor) {
+    if (
+      !dataValue.some((item, index) => index !== valor.data[0] || !dataValue.includes(valor.data)) ||
+      !dataValue.filter((item, index) => {
+        dataValue.indexOf(item) === index;
+      })
+    ) {
+      setDataValue((prevData) => [...prevData, valor.data]);
+    }
+  });
+  dataValue;
   return (
     <div>
       <Sidebar />
