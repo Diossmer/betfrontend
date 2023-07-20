@@ -1,0 +1,41 @@
+/** HOME**/
+/*(!dataValue.some((item, index) => index !== data || !dataValue.includes(data)) ||
+        !dataValue.filter((item, index) => {
+          dataValue.indexOf(item) === index;
+        }) proposal optional chaining assignment (traking the site)*/  
+        //const [dataValue, setDataValue] = useState([]);  
+              {/* <ul>
+        {dataValue.map((element, i) => (
+          <li key={i}>{element.deporteId}</li>
+        ))}
+      </ul> */}
+      
+//crear un componente
+function MyButton({children}) {
+let name ="prueba"
+
+  return (
+  <>
+  <p>driver.js {name}</p>
+    <button className="red">Soy un botón</button>
+    <p>{children}</p>
+	</>
+  );
+}
+
+<MyButton>hijo</MyButton>
+
+
+
+/* DONDE PUEDE IR ESTO COMO ACEPTAR EL CAMBIO DEL LAYOUTS */
+let content;
+if (isLoggedIn) {
+  content = <AdminPanel />;
+} else {
+  content = <LoginForm />;
+}
+return (
+  <div>
+    {content}
+  </div>
+);

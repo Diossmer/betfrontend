@@ -11,6 +11,8 @@ import { useEffect, useState } from "react";
 //API
 import { post } from "../api/Query";
 import { URL } from "../api/Control";
+//css
+import "../../public/assets/home.css"
 
 const param = {
   deporteId: "25",
@@ -18,7 +20,7 @@ const param = {
 };
 
 export default function Home() {
-  //const [dataValue, setDataValue] = useState([]);
+
   const [dataValue, setDataValue] = useState();
 
   useEffect(() => {
@@ -30,23 +32,7 @@ export default function Home() {
       });
     return () => {};
   }, []);
-
-  /* let result = post(URL.crear.sport, param);
-  result
-    .then((res) => res.json())
-    .then((data) => {
-      setDataValue(data); */
-  /* if (
-        !dataValue.some((item, index) => index !== data || !dataValue.includes(data)) ||
-        !dataValue.filter((item, index) => {
-          dataValue.indexOf(item) === index;
-        })
-      ) {
-        setDataValue((prevData) => [...prevData, data]);
-      } */
-  /* }); */
-
-  console.log(dataValue);
+console.log(dataValue);
 
   return (
     <div>
@@ -55,11 +41,6 @@ export default function Home() {
       <Headers />
       <p>{JSON.stringify(dataValue?.deporteId)}</p>
       <p>{JSON.stringify(dataValue?.nombreDeporte)}</p>
-      {/* <ul>
-        {dataValue.map((element, i) => (
-          <li key={i}>{element.deporteId}</li>
-        ))}
-      </ul> */}
       <Cards></Cards>
       <Footers />
     </div>
