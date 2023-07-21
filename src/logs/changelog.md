@@ -1,3 +1,22 @@
+* 'f6bcd5d,Bet Silk,Thu Jul 20 21:42:36 2023 -0400'| 
+| M	README.md
+| R100	public/assets/layouts/Admin.module.css	public/assets/layouts/Admin.css
+| R100	public/assets/layouts/Auth.module.css	public/assets/layouts/Auth.css
+| R100	public/assets/templates/Auth.module.css	public/assets/layouts/Services.css
+| A	public/assets/pages/Admin.module.css
+| A	public/assets/pages/Auth.module.css
+| A	public/assets/pages/Home.css
+| A	public/assets/pages/Profile.css
+| A	public/assets/pages/Services.module.css
+| A	public/assets/templates/Footer.css
+| A	public/assets/templates/Navbars.css
+| A	public/assets/templates/Sidebar.css
+| R100	src/components/card/index.jsx	src/components/card/CardHome.jsx
+| M	src/logs/changelog.md
+| M	src/pages/Home.jsx
+| M	src/pages/admin/Dashboard.jsx
+| M	src/routers/router.jsx
+
 * '7a098c6,Bet Silk,Thu Jul 20 21:23:05 2023 -0400'| 
 | D	public/App.css
 | A	public/assets/App.css
@@ -133,7 +152,7 @@
   A	src/components/accordion/index.jsx
   A	src/components/alert/index.jsx
   A	src/components/card/index.jsx
-  A	src/components/form/**index**.jsx
+  A	src/components/form/index.jsx
   A	src/components/menu/index.jsx
   A	src/components/modal/index.jsx
   A	src/error/index.jsx

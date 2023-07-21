@@ -1,0 +1,6 @@
+.red{
+    background-color: rgba(100, 15, 68, .87);
+    & h1{
+        color: darkorange;
+    }
+}
