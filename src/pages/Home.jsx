@@ -12,7 +12,7 @@ import { useEffect, useState } from "react";
 import { post } from "../api/Query";
 import { URL } from "../api/Control";
 //css
-//import "../../public/assets/Home.css"
+import "../../public/assets/pages/Home.css"
 
 const param = {
   deporteId: "25",
@@ -34,7 +34,7 @@ export default function Home() {
   console.log(dataValue);
 
   return (
-    <div>
+    <div className="container">
       <Sidebar />
       <Navbars />
       <Headers />
