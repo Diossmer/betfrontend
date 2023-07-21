@@ -12,7 +12,7 @@ import { useEffect, useState } from "react";
 import { post } from "../api/Query";
 import { URL } from "../api/Control";
 //css
-import "../../public/assets/home.css"
+//import "../../public/assets/Home.css"
 
 const param = {
   deporteId: "25",
@@ -20,7 +20,6 @@ const param = {
 };
 
 export default function Home() {
-
   const [dataValue, setDataValue] = useState();
 
   useEffect(() => {
@@ -32,7 +31,7 @@ export default function Home() {
       });
     return () => {};
   }, []);
-console.log(dataValue);
+  console.log(dataValue);
 
   return (
     <div>
