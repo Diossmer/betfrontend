@@ -4,7 +4,7 @@ import Headers from "../templates/headers/Home";
 import Navbars from "../templates/navbars/Home";
 import Footers from "../templates/footers/Home";
 //components
-import Cards from "../components/card";
+import Cards from "../components/card/CardHome";
 //hook
 import { useEffect, useState } from "react";
 //import { UseHook } from "../hook/UseHook";

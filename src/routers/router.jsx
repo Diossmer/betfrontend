@@ -15,8 +15,8 @@ import Protected from "../utils/Protected";
 //Error
 import ErrorPage, { ErrorBoundary } from "../error/404";
 //API
-import { post, put, destroy, find, get } from "../api/Query";
-import { URL } from "../api/Control";
+//import { post, put, destroy, find, get } from "../api/Query";
+//import { URL } from "../api/Control";
 
 export default function Router() {
   return (
@@ -31,7 +31,7 @@ export default function Router() {
           <Route path={"admin/*"} element={<Admin />} errorElement={<ErrorPage />} />
           <Route path="profile" element={<Profile />} errorElement={<ErrorPage />} />
         </Route>
-          <Route path="*" element={<ErrorPage />} errorElement={<ErrorBoundary />} />
+        <Route path="*" element={<ErrorPage />} errorElement={<ErrorBoundary />} />
       </Routes>
     </>
   );

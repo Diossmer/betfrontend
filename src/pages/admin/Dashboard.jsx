@@ -1,4 +1,4 @@
-import Cards from "../../components/card";
+import Cards from "../../components/card/CardHome";
 
 export default function Footers() {
   return (
