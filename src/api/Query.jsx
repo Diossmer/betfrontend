@@ -1,9 +1,9 @@
+//Show All
 export const get = async (url) => {
-  return await console.log("Show All", url);
+  return await fetch(url);
 };
-
+//Saved
 export const post = async (url, params) => {
-  //console.log("Saved", url, params);
   return await fetch(`${url}`, {
     method: "POST",
     headers: {
@@ -11,20 +11,16 @@ export const post = async (url, params) => {
     },
     body: JSON.stringify(params),
   });
-  /* return await {
-    ok: 200,
-    data: params,
-  }; */
 };
-
-export const find = async (url) => {
-  return await console.log("Show One", url);
+//Show One
+export const show = async (url, id) => {
+  return await fetch(`${url}/${id}`);
 };
-
-export const put = async (url) => {
-  return await console.log("Update", url);
+//Update
+export const put = async (url, id) => {
+  return await console.log("Update", `${url}/${id}`);
 };
-
-export const destroy = async (url) => {
-  return await console.log("Delete", url);
+//Delete
+export const destroy = async (url, id) => {
+  return await console.log("Delete", `${url}/${id}`);
 };

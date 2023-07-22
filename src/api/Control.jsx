@@ -6,7 +6,7 @@ export const URL = {
     match: "http://localhost:12001/commands/bookService/crearPartido",
   },
   obtener: {
-    eventStore: "http://localhost:12001/commands/bookService/eventStore/1",
+    eventStore: "http://localhost:12001/commands/bookService/eventStore",
     allMatches: "http://localhost:12001/queries/bookService/partidos/todos",
     noStart: "http://localhost:12001/queries/bookService/no-comenzados/v1",
   },

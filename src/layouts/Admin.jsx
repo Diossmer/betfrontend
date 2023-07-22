@@ -11,6 +11,7 @@ import Protected from "../utils/Protected";
 import { Route, Routes, Outlet } from "react-router-dom";
 //css module
 import styled from "../../public/assets/layouts/Admin.module.css";
+import ErrorPage from "../error/404";
 
 export default function Admin() {
   return (
@@ -23,8 +24,9 @@ export default function Admin() {
           <h1>Admin</h1>
         </div>
         <Routes>
-          <Route element={Protected(true)}>
+          <Route element={Protected(true)} basename="auth">
             <Route path="dashboard" element={<Dashboard />} />
+            <Route path="*" element={<ErrorPage />} errorElement={<ErrorPage />} />
           </Route>
         </Routes>
         <Outlet />
