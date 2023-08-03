@@ -9,25 +9,27 @@ import { FormExercise } from "../components/form/FormExercise";
 import { useEffect, useState } from "react";
 //import { UseHook } from "../hook/UseHook";
 //API
-//import { post } from "../api/Query";
-//import { URL } from "../api/Control";
+import { post } from "../api/Query";
+import { URL } from "../api/Control";
 //css
 import "../../public/assets/pages/Home.css";
 
 export default function Home() {
-  const [param, setData] = useState({});
+  const [dataValue, setDataValue] = useState();
   useEffect(() => {
-    //post(URL.create.sport);
+    post(URL.create.sport, dataValue)
+      .then((res) => console.log(res.json()))
+      .then((data) => console.log(data));
     return () => {
-      //limpiando setData();
+      //limpiando setDataValue();
     };
-  }, []);
+  }, [dataValue]);
   return (
     <div className="container">
       <Sidebar />
       <Navbars />
-      <FormExercise onclick={setData} />
-      {JSON.stringify(param)}
+      <FormExercise onclick={setDataValue} />
+      {JSON.stringify(dataValue)}
       <Headers />
       <Footers />
     </div>

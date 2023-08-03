@@ -1,22 +1,28 @@
-let sport = {
-  deporteId: 0,
-  nombreDeporte: "",
-};
+import { useState } from "react";
 
+/* eslint-disable react/prop-types */
 function FormExercise({ onclick }) {
-  function handleClick(e) {
+  const [sport, setSport] = useState({
+    deporteId: "0",
+    nombreDeporte: "",
+  });
+
+  function handleSubmit(e) {
     e.preventDefault();
-    console.log(e);
     onclick(sport);
   }
 
+  function handleInputChange(e) {
+    e.preventDefault();
+    setSport({ ...sport, [e.target.name]: e.target.value });
+  }
   return (
     <>
-      <form onClick={handleClick}>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="">number sport</label>
-        <input type="text" name={sport.deporteId} />
+        <input type="text" name="deporteId" onChange={handleInputChange} value={sport.deporteId} />
         <label htmlFor="">which sport?</label>
-        <input type="text" name={sport.nombreDeporte} />
+        <input type="text" name="nombreDeporte" onChange={handleInputChange} value={sport.nombreDeporte} />
         <input type="submit" value="Send" />
       </form>
     </>
