@@ -23,7 +23,7 @@ export default function Home() {
       <Sidebar />
       <Navbars />
       <FormSport dataSport={dataSport} setDataSport={setDataSport} />
-      <FormLeague  dataLeague={dataLeague} setDataLeague={setDataLeague} />
+      <FormLeague  dataLeague={dataLeague} setDataLeague={setDataLeague} dataSport={dataSport} />
       {JSON.stringify(dataSport)}
       {JSON.stringify(dataLeague)}
       <Headers />

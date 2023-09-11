@@ -4,7 +4,7 @@ import { post } from "../../api/Query";
 import { URL } from "../../api/Control";
 
 /* eslint-disable react/prop-types */
-function FormLeague({ dataLeague, setDataLeague }) {
+function FormLeague({ dataLeague, setDataLeague, dataSport }) {
   const [sport, setSport] = useState({
     deporteId: "0",
     nombreDeporte: "",
@@ -12,6 +12,7 @@ function FormLeague({ dataLeague, setDataLeague }) {
 
   function handleSubmit(e) {
     e.preventDefault();
+    console.log(dataSport)
     setDataLeague(sport);
   }
 
